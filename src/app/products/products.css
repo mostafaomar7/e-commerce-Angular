@@ -1,0 +1,130 @@
+#product {
+  margin-top: 180px;
+  font-family: "Sansation", sans-serif;
+}
+
+.title {
+  color: #ffbd39;
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+}
+
+.title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #ffbd39;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.product-card {
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.stock{
+    border-radius: 9px;
+    padding: 2px 8px;
+    color: #fff;
+}
+
+.in-stock {
+  background-color: #28a745; 
+}
+
+.low-stock {
+  background-color: #dc3545; 
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  height: 300px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.product-price {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-custom {
+  background-color: #090cbe;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-custom:hover {
+  background-color: #0011ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    margin: 10px;
+  }
+  
+  .product-card img {
+    height: 250px;
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+  }
+  
+  .btn-custom {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+.loader {
+    margin-top: 150px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loader::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FFF;
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }

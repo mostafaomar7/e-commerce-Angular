@@ -1,0 +1,89 @@
+body {
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 70px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  font-family: "Sansation", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+p, span, li {
+  color: #bbb;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+  box-shadow: 0 0 15px #28a745cc;
+}
+
+.text-warning i {
+  color: #f1c40f; 
+  margin-right: 4px;
+  filter: drop-shadow(0 0 2px #f1c40f);
+}
+
+.not-found {
+  color: #ff4c4c;
+  background-color: #330000;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
+.loader {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loader::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FFF;
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
