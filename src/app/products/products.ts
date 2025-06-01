@@ -45,6 +45,12 @@ export class Products implements OnInit {
       this.addedToCartId = null;
     }, 4000); 
   }
+   limitWords(text: string, wordLimit: number): string {
+  let words = text.split(' ');
+  return words.length > wordLimit
+    ? words.slice(0, wordLimit).join(' ') + '...'
+    : text;
+}
 
    isLoading: boolean = true;
   ngOnInit() {

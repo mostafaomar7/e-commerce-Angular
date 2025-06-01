@@ -48,10 +48,20 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
+.product-img {
+  position: relative;
+    height: 220px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
 .product-card img {
-  height: 300px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
 }
 .product-price {
   font-size: 22px;
@@ -80,12 +90,8 @@
   .product-card {
     margin: 10px;
   }
-  
-  .product-card img {
-    height: 250px;
-  }
-  
-  .title {
+
+    .title {
     font-size: 32px;
   }
   
